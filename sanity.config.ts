@@ -1,6 +1,6 @@
 export default {
-  apiVersion: 'v2022-05-01',
+  apiVersion: '2022-10-25',
   dataset: 'production',
-  projectId: 'g2b4qblu',
+  projectId: 'kvnrtea7',
   useCdn: true,
 };
