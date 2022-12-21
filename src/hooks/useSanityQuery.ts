@@ -1,5 +1,5 @@
 import sanityClient from '@sanity/client';
-import {HydrogenUseQueryOptions, useQuery, log} from '@shopify/hydrogen';
+import {HydrogenUseQueryOptions, useQuery} from '@shopify/hydrogen';
 import sanityConfig from '../../sanity.config';
 
 interface Props {
@@ -18,14 +18,9 @@ export default function useSanityQuery<T>({
   query,
   params = {},
 }: Props) {
-  log.debug("Start sanity query: ", sanityConfig);
   return useQuery<T>(
     [query, params],
-    async () => { 
-      const resp =  await client.fetch(query, params);
-      log.debug(resp);
-      return resp;
-    },
+    async () => await client.fetch(query, params),
     hydrogenQueryOptions,
   );
 }

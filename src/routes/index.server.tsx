@@ -16,9 +16,7 @@ import useSanityQuery from '../hooks/useSanityQuery';
 import type {SanityHomePage} from '../types';
 
 export default function IndexRoute() {
-  log.debug("Start IndexRoute.");
-
-  const {data: sanityHome} = useSanityQuery<SanityHomePage>({
+  const {data: sanityHome, error: sanityError} = useSanityQuery<SanityHomePage>({
     hydrogenQueryOptions: {preload: true},
     query: QUERY_SANITY,
   });
@@ -28,10 +26,14 @@ export default function IndexRoute() {
     shopify: {pageType: ShopifyAnalyticsConstants.pageType.home},
   });
 
-  // if (!sanityHome) {
-  //   // @ts-expect-error <NotFound> doesn't require response
-  //   return <NotFound />;
-  // }
+  if (sanityError) {
+    log.debug(`Sanity client error: ${sanityError}`);
+  }
+
+  if (!sanityHome) {
+    // @ts-expect-error <NotFound> doesn't require response
+    return <NotFound />;
+  }
 
   return (
     <Layout>
