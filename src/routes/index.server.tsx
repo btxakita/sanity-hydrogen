@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import {
+  log,
   Seo,
   ShopifyAnalyticsConstants,
   useServerAnalytics,
@@ -15,6 +16,8 @@ import useSanityQuery from '../hooks/useSanityQuery';
 import type {SanityHomePage} from '../types';
 
 export default function IndexRoute() {
+  log.debug("Start IndexRoute.");
+
   const {data: sanityHome} = useSanityQuery<SanityHomePage>({
     hydrogenQueryOptions: {preload: true},
     query: QUERY_SANITY,
@@ -48,7 +51,7 @@ export default function IndexRoute() {
         <NotFound />
       }>
         {sanityHome?.hero && <HomeHero hero={sanityHome.hero} />}
-        
+
         {sanityHome?.modules && (
           <div
             className={clsx(

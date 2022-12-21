@@ -18,6 +18,7 @@ export default function useSanityQuery<T>({
   query,
   params = {},
 }: Props) {
+  log.debug("Start sanity query: ", sanityConfig);
   return useQuery<T>(
     [query, params],
     async () => { 
