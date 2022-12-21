@@ -24,7 +24,7 @@ import Layout from './Layout.server';
  */
 
 type Props = {
-  response: HydrogenResponse;
+  response: HydrogenResponse | undefined;
 };
 
 type ShopifyPayload = {

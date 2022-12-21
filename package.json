@@ -1,10 +1,10 @@
 {
-  "name": "sanity-hydrogen-app",
-  "description": "This the default template for Hydrogen",
-  "version": "0.0.0",
+  "name": "fastlane-sanity-hydrogen",
+  "description": "This the Fastlane template for Hydrogen",
+  "version": "0.5.0",
   "license": "MIT",
   "private": true,
-  "author": "Sanity.io <hello@sanity.io>",
+  "author": "BTx <btxakita@gmail.com>",
   "scripts": {
     "dev": "shopify hydrogen dev",
     "build": "shopify hydrogen build",
