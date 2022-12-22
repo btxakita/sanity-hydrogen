@@ -15,8 +15,8 @@ export default function LoadingFallback() {
     >
       <div
         className={clsx(
-          'absolute bottom-0 top-0 left-1/2 flex w-[50px] -translate-x-1/2 items-center',
-          'lg:w-[65px]',
+          'absolute bottom-0 top-0 left-1/2 flex w-[120px] -translate-x-1/2 items-center',
+          'lg:w-[140px]',
         )}
       >
         <LogoIcon className="h-auto w-full" />

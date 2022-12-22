@@ -31,21 +31,17 @@ export default function HeaderBackground() {
       <Link to="/">
         <div
           className={clsx(
-            'absolute bottom-0 top-0 left-1/2 flex w-[50px] -translate-x-1/2 items-center',
-            'lg:w-[65px]',
+            'absolute bottom-0 top-0 left-1/2 flex w-[120px] -translate-x-1/2 items-center',
+            'lg:w-[140px]',
           )}
         >
           <LogoIcon
             className="h-auto w-full"
-            classNameMark={clsx([
-              'duration-700',
-              scrolledDown ? 'translate-y-1/4' : 'translate-y-0',
-            ])}
             classNameType={clsx([
               'duration-500',
               scrolledDown
-                ? 'opacity-0 translate-y-1'
-                : 'opacity-100 translate-y-0',
+                ? 'fill-[#F20000] translate-y-1'
+                : 'fill-offBlack translate-y-0',
             ])}
           />
         </div>

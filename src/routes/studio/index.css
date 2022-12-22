@@ -1,0 +1,13 @@
+/* This assumes no margin or padding on #app's parent(s) */
+#root {
+  height: 100vh;
+  max-height: 100dvh;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  overflow: auto;
+}
+  
+/* Fix if you're using Tailwind.css */
+*:not([data-ui='Popover__arrow']):not([data-ui='Tooltip__arrow']) > svg {
+  display: inline;
+}

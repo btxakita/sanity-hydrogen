@@ -15,8 +15,12 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2020",
-    "types": ["vite/client", "vitest/globals"]
+    "types": ["vite/client", "vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+    }
   },
   "exclude": ["node_modules", "dist", "studio"],
-  "include": ["**/*.ts", "**/*.tsx", ".d.ts"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", ".d.ts"]
 }
