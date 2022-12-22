@@ -1,7 +1,7 @@
 // @ts-expect-error incompatibility with node16 resolution
 import type {PortableTextBlock} from '@portabletext/types';
 import clsx from 'clsx';
-import sanityConfig from '../../../../sanity.config';
+import sanityConfig from '../../../../sanityclient.config';
 import type {SanityModuleGrid} from '../../../types';
 import PortableText from '../PortableText.server';
 import SanityImage from '../../media/SanityImage.client';

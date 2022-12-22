@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { ReactElement, Suspense } from 'react';
 import {
   log,
   Seo,
@@ -14,12 +14,13 @@ import ModuleGrid from '../components/modules/ModuleGrid.server';
 import NotFound from '../components/global/NotFound.server';
 
 import {HOME_PAGE} from '../fragments/sanity/pages/home';
+// import useSanityQuery from '../hooks/useSanityQuery';
 import useSanityQuery from '../hooks/useSanityQuery';
 import type {SanityHomePage} from '../types';
 
 
 
-export default function IndexRoute() {
+export default function IndexRoute():ReactElement {
   const {data: sanityHome, error: sanityError} = useSanityQuery<SanityHomePage>({
     hydrogenQueryOptions: {preload: true},
     query: QUERY_SANITY,

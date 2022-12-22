@@ -1,7 +1,7 @@
 import sanityClient from '@sanity/client';
 import type {HydrogenRequest} from '@shopify/hydrogen';
 import groq from 'groq';
-import sanityConfig from '../../sanity.config';
+import sanityConfig from '../../sanityclient.config';
 
 type SitemapPage = {
   _updatedAt: string;

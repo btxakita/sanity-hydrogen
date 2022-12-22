@@ -1,4 +1,5 @@
-import {type DocumentActionProps, type DocumentActionDescription, type SanityDocument} from 'sanity'
+import {type DocumentActionProps, type SanityDocument} from 'sanity'
+// type DocumentActionDescription
 
 export type ShopifyDocument = SanityDocument & {
   store: {

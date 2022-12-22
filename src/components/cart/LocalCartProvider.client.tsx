@@ -10,24 +10,31 @@ import CartUIProvider, {useCartUI} from './CartUIProvider.client';
 type Props = {
   children: ReactNode;
   countryCode?: CountryCode;
+  customerAccessToken?: string;
   numCartLines?: number;
 };
 
 export default function CartProvider({
   children,
   countryCode,
+  customerAccessToken,
   numCartLines,
 }: Props) {
   return (
     <CartUIProvider>
-      <Provider countryCode={countryCode} numCartLines={numCartLines}>
+      <Provider countryCode={countryCode} customerAccessToken={customerAccessToken} numCartLines={numCartLines}>
         {children}
       </Provider>
     </CartUIProvider>
   );
 }
 
-function Provider({children, countryCode, numCartLines}: Props) {
+function Provider({
+  children, 
+  countryCode, 
+  customerAccessToken, 
+  numCartLines
+}: Props) {
   const {openCart} = useCartUI();
 
   const open = useCallback(() => {
@@ -37,6 +44,7 @@ function Provider({children, countryCode, numCartLines}: Props) {
   return (
     <ShopifyCartProvider
       countryCode={countryCode}
+      customerAccessToken={customerAccessToken}
       numCartLines={numCartLines}
       onLineAdd={open}
       onCreate={open}

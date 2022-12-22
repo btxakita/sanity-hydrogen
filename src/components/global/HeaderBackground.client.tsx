@@ -1,24 +1,26 @@
-import {Link} from '@shopify/hydrogen';
-import LogoIcon from '../icons/Logo';
+import { useEffect, useState } from 'react';
+import { Link } from '@shopify/hydrogen';
 import clsx from 'clsx';
-import {useEffect, useState} from 'react';
+import LogoIcon from '../icons/Logo';
 
 export default function HeaderBackground() {
   const [scrolledDown, setScrolledDown] = useState(false);
 
-  const handleScroll = () => {
+  const handleScroll = (_event: any) => {
     setScrolledDown(window.scrollY > 100);
-  };
+    console.log(window.scrollY);
+  }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    console.log(window);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     // Trigger handler on mount to account for reloads
-    handleScroll();
+    handleScroll(null);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0" onScroll={handleScroll}>
       {/* Background */}
       <div
         className={clsx([

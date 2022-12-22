@@ -1,5 +1,6 @@
+import React from 'react'
 import {CloseIcon, ImageIcon, LinkRemovedIcon} from '@sanity/icons'
-import React, {forwardRef, useState} from 'react'
+import {forwardRef, useState} from 'react'
 
 type Props = {
   isActive?: boolean

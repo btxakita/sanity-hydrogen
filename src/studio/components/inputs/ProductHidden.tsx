@@ -1,7 +1,8 @@
 import {WarningOutlineIcon} from '@sanity/icons'
 import {StringFieldProps, useFormValue} from 'sanity'
 import {Box, Card, Flex, Stack, Text} from '@sanity/ui'
-import {productUrl} from '../../utils/shopifyUrls'
+import {productUrl} from '../../../studio/utils/shopifyUrls'
+import React from 'react'
 
 type Store = {
   id: number
@@ -12,7 +13,7 @@ type Store = {
 export default function ProductHiddenInput(props: StringFieldProps) {
   const store: Store = useFormValue(['store']) as Store
 
-  let message
+  let message: string | React.ReactFragment | JSX.Element | null | undefined
   if (!store) {
     return <></>
   } else {

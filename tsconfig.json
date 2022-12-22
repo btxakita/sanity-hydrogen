@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "lib": ["dom", "dom.iterable", "scripthost", "es2020"],
+    // "jsx": "react-jsx",
     "jsx": "react-jsx",
     "outDir": "dist",
     "module": "esnext",
@@ -15,7 +16,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2020",
-    "types": ["vite/client", "vitest/globals"],
+    "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],

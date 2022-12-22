@@ -1,8 +1,9 @@
+import React, {useMemo} from 'react'
 import styled from 'styled-components'
 import {PreviewLayoutKey, SchemaType, useSchema} from 'sanity'
 import {Box} from '@sanity/ui'
 import {HotspotTooltipProps} from 'sanity-plugin-hotspot-array'
-import {useMemo} from 'react'
+
 
 interface HotspotFields {
   productWithVariant?: {

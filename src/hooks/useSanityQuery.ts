@@ -1,6 +1,6 @@
 import sanityClient from '@sanity/client';
 import {HydrogenUseQueryOptions, useQuery} from '@shopify/hydrogen';
-import sanityConfig from '../../sanity.config';
+import sanityConfig from '../../sanityclient.config';
 
 interface Props {
   /** A string of the GROQ query. */
@@ -11,13 +11,13 @@ interface Props {
   hydrogenQueryOptions?: HydrogenUseQueryOptions;
 }
 
-const client = sanityClient(sanityConfig);
-
 export default function useSanityQuery<T>({
   hydrogenQueryOptions,
   query,
   params = {},
 }: Props) {
+  const client = sanityClient(sanityConfig);
+  
   return useQuery<T>(
     [query, params],
     async () => await client.fetch(query, params),

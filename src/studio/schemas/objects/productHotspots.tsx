@@ -1,4 +1,3 @@
-import React from 'react'
 import {defineField} from 'sanity'
 import ProductTooltip from '../../components/hotspots/ProductTooltip'
 import ShopifyDocumentStatus from '../../components/media/ShopifyDocumentStatus'

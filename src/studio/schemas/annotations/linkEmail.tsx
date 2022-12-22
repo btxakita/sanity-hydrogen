@@ -4,7 +4,6 @@
  * Read more: https://www.sanity.io/docs/customization#f924645007e1
  */
 import {EnvelopeIcon} from '@sanity/icons'
-import React from 'react'
 import {defineField} from 'sanity'
 
 export default defineField({

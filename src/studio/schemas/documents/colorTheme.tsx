@@ -1,5 +1,4 @@
 import {IceCreamIcon} from '@sanity/icons'
-import React from 'react'
 import {defineField, defineType} from 'sanity'
 import ColorTheme from '../../components/media/ColorTheme'
 

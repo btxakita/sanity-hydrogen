@@ -1,6 +1,6 @@
 import {gql, useShopQuery} from '@shopify/hydrogen';
 import {Product, ProductVariant} from '@shopify/hydrogen/storefront-api-types';
-import sanityConfig from '../../../sanity.config';
+import sanityConfig from '../../../sanityclient.config';
 import {PRODUCT_FIELDS} from '../../fragments/shopify/product';
 import {PRODUCT_VARIANT_FIELDS} from '../../fragments/shopify/productVariant';
 import type {
