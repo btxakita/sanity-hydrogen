@@ -1,10 +1,8 @@
 import {
   gql,
   Seo,
-  ShopifyAnalyticsConstants,
   useLocalization,
   useRouteParams,
-  useServerAnalytics,
   useShopQuery,
 } from '@shopify/hydrogen';
 import type {Product} from '@shopify/hydrogen/storefront-api-types';
@@ -66,16 +64,16 @@ export default function ProductRoute() {
   }
 
   // Shopify analytics
-  useServerAnalytics(
-    storefrontProduct
-      ? {
-          shopify: {
-            pageType: ShopifyAnalyticsConstants.pageType.product,
-            resourceId: storefrontProduct.id,
-          },
-        }
-      : null,
-  );
+  // useServerAnalytics(
+  //   storefrontProduct
+  //     ? {
+  //         shopify: {
+  //           pageType: ShopifyAnalyticsConstants.pageType.product,
+  //           resourceId: storefrontProduct.id,
+  //         },
+  //       }
+  //     : null,
+  // );
 
   if (!sanityProduct || !storefrontProduct) {
     // @ts-expect-error <NotFound> doesn't require response

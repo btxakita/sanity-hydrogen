@@ -2,17 +2,15 @@ import { useEffect, useState } from 'react';
 import { Link } from '@shopify/hydrogen';
 import clsx from 'clsx';
 import LogoIcon from '../icons/Logo';
-import { useOneEffect } from '~/hooks/useOneEffect';
 
 export default function HeaderBackground() {
   const [scrolledDown, setScrolledDown] = useState(false);
 
   const handleScroll = () => {
     setScrolledDown(window.scrollY > 100);
-    console.log(`ScrollY: ${window.scrollY}`);
   }
 
-  useOneEffect(() => {
+  useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener('scroll', handleScroll, { passive: true });
       // Trigger handler on mount to account for reloads

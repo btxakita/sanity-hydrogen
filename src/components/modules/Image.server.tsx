@@ -4,7 +4,7 @@ import type {
   ProductVariant,
 } from '@shopify/hydrogen/storefront-api-types';
 import clsx from 'clsx';
-import sanityConfig from '../../../sanityclient.config';
+import sanityConfig from '../../../sanity.config';
 import {PRODUCT_FIELDS} from '../../fragments/shopify/product';
 import {PRODUCT_VARIANT_FIELDS} from '../../fragments/shopify/productVariant';
 import type {

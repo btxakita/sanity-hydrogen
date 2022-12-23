@@ -22,6 +22,6 @@
       "~/*": ["./src/*"],
     }
   },
-  "exclude": ["node_modules", "dist", "studio"],
+  "exclude": ["node_modules", "dist"],
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", ".d.ts"]
 }

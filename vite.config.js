@@ -11,22 +11,6 @@ export default defineConfig({
   // legacy: {
   //   buildSsrCjsExternalHeuristics: true,
   // },
-  // server: {
-  //   port: 5173,
-  //   strictPort: true,
-  //   hmr: {
-  //     protocol: 'ws',
-  //     clientPort: 5173,
-  //   }
-  // },
-  // preview: {
-  //   port: 3000,
-  //   strictPort: true,
-  //   hmr: {
-  //     protocal: 'ws',
-  //     clientPort: 3000,
-  //   }
-  // },
   optimizeDeps: {include: [
     '@headlessui/react',
     'clsx',

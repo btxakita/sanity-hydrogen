@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import sanityConfig from '../../../sanityclient.config';
+import sanityConfig from '../../../sanity.config';
 import type {
   SanityAssetImage,
   SanityModuleCallToAction,

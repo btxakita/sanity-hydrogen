@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   extends: [
     'plugin:hydrogen/recommended',
     'plugin:hydrogen/typescript'

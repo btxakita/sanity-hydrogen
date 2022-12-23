@@ -1,6 +1,6 @@
 import sanityClient from '@sanity/client';
 import {HydrogenUseQueryOptions, useQuery} from '@shopify/hydrogen';
-import sanityConfig from '../../sanityclient.config';
+import sanityConfig from '../../sanity.config';
 
 interface Props {
   /** A string of the GROQ query. */
