@@ -2,25 +2,27 @@ import { useEffect, useState } from 'react';
 import { Link } from '@shopify/hydrogen';
 import clsx from 'clsx';
 import LogoIcon from '../icons/Logo';
+import { useOneEffect } from '~/hooks/useOneEffect';
 
 export default function HeaderBackground() {
   const [scrolledDown, setScrolledDown] = useState(false);
 
-  const handleScroll = (_event: any) => {
+  const handleScroll = () => {
     setScrolledDown(window.scrollY > 100);
-    console.log(window.scrollY);
+    console.log(`ScrollY: ${window.scrollY}`);
   }
 
-  useEffect(() => {
-    console.log(window);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    // Trigger handler on mount to account for reloads
-    handleScroll(null);
-    return () => window.removeEventListener('scroll', handleScroll);
+  useOneEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      // Trigger handler on mount to account for reloads
+      handleScroll();
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   return (
-    <div className="absolute inset-0" onScroll={handleScroll}>
+    <div className="absolute inset-0">
       {/* Background */}
       <div
         className={clsx([

@@ -1,5 +1,5 @@
 /* This assumes no margin or padding on #app's parent(s) */
-#root {
+.studio {
   height: 100vh;
   max-height: 100dvh;
   overscroll-behavior: none;
