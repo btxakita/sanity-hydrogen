@@ -16,7 +16,6 @@
     "@shopify/hydrogen": "^1.6.0",
     "@shopify/mini-oxygen": "^1.4.0",
     "@vitejs/plugin-react": "^2.0.0",
-    "@sanity/client": "3.3.3-esm.20",
     "get-it": "^7.0.2"
   },
   "devDependencies": {
